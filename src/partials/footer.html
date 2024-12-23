@@ -1,0 +1,64 @@
+<footer class="footer" id="footer">
+  <div class="container">
+    <h2 class="footer-title">
+      <picture class="title-image">
+        <source
+          srcset="
+            ../img/foto-tablet-desktop.webp    1x,
+            ../img/foto-tablet-desktop@2x.webp 2x
+          "
+          media="(min-width: 1440px)"
+          type="image/webp"
+        />
+        <source
+          srcset="../img/foto-mobile.webp 1x, ../img/foto-mobile@2x.webp 2x"
+          media="(max-width: 1139px)"
+          type="image/webp"
+        />
+        <img
+          src="../img/foto-tablet-desktop.webp"
+          alt="Photo"
+          width="70"
+          height="70"
+        />
+      </picture>
+      Let’s <span class="footer-span"> work</span> together
+    </h2>
+    <form class="submit-form submit-form-js">
+      <div class="input-wrap">
+        <input
+          type="text"
+          class="input"
+          name="userEmail"
+          id="user-email"
+          placeholder="clients@gmail.com"
+        />
+        <span class="email-text-success">Success!</span>
+        <span class="email-text-error">Invalid email, try again!</span>
+        <input
+          type="text"
+          class="input"
+          name="userComments"
+          id="user-comments"
+          placeholder="comments"
+        />
+        <span class="comments-text-error">This field is required!</span>
+      </div>
+      <button class="send-btn" type="submit">Send</button>
+    </form>
+    <address class="contacts">
+      <ul class="contacts-list">
+        <li class="hero-mail">
+          <a href="mailto:lloydjefferson@gmail.com" class="hero-mail-link"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+        <li class="hero-mail">
+          <a href="tel:+3801111111111" class="hero-mail-link"
+            >+380 11 1111 11 11</a
+          >
+        </li>
+      </ul>
+    </address>
+  </div>
+</footer>
