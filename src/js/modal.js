@@ -1,12 +1,11 @@
 const body = document.querySelector('body');
 const windowModal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.window-btn');
+const closeBtn = document.querySelector('.modal-window-btn');
 const OPEN_MODAL = 'is-open';
 
 export const openModal = data => {
   windowModal.classList.add(OPEN_MODAL);
   body.style.overflow = 'hidden';
-  renderModal(data);
 };
 
 closeBtn.addEventListener('click', () => {
@@ -31,24 +30,9 @@ function closeWindow() {
   clearModal();
 }
 
-function renderModal({ title = '', message = '' }) {
-  const modalTitle = document.createElement('h2');
-  modalTitle.classList.add('modal-window-title');
-  modalTitle.textContent = title;
-
-  const modalMessage = document.createElement('p');
-  modalMessage.classList.add('modal-window-text');
-  modalMessage.textContent = message;
-  clearModalData();
-
-  const modalWindow = document.querySelector('.modal-window');
-  modalWindow.appendChild(modalTitle);
-  modalWindow.appendChild(modalText);
-}
-
 function clearModal() {
-  const modalTitle = document.querySelector('.modal-window-title');
-  const modalMessage = document.querySelector('.modal-window-text');
+  const modalTitle = document.querySelector('.modal-title');
+  const modalMessage = document.querySelector('.modal-massage');
   if (modalTitle) {
     modalTitle.remove();
   }

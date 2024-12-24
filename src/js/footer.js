@@ -3,6 +3,8 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import { openModal } from './modal';
+
 const form = document.querySelector('.submit-form-js');
 const [inputEmail, inputComments] = form;
 
@@ -81,7 +83,7 @@ const allValidate = () => {
 
 const KEY = 'formData';
 
-const formData = getFromLocalStorage() || {
+const formData = getLocalStorage() || {
   userEmail: '',
   userComments: '',
 };
@@ -111,7 +113,7 @@ async function onSubmit(event) {
   }
 
   try {
-    const data = sendUser({
+    const data = await sendUser({
       email: userEmail,
       comment: userComments,
     });
@@ -129,7 +131,7 @@ async function onSubmit(event) {
 function setLocalStorage(value, key = KEY) {
   localStorage.setItem(key, JSON.stringify(value));
 }
-function getFromLocalStorage(key = KEY) {
+function getLocalStorage(key = KEY) {
   return JSON.parse(localStorage.getItem(key));
 }
 
