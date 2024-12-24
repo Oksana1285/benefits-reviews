@@ -25,7 +25,7 @@ document.addEventListener('keydown', event => {
 });
 
 function closeWindow() {
-  windowModal.classList.remove(OPEN_CLASS);
+  windowModal.classList.remove(OPEN_MODAL);
   document.body.style.overflow = 'auto';
   clearModal();
 }
